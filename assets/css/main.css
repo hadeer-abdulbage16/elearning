@@ -9,7 +9,7 @@ body{
 
 
 .navbar{
-    position: fixed;
+    position: sticky;
   z-index: 162004; 
   width: 100%;
   box-shadow: 0px 0px 0px 4px  rgb(0, 0, 0 ,0.2) ;
@@ -75,81 +75,13 @@ p{
 .btn:hover{
     background-color: var(--light);
     color:var(--primary);
-}
-@media  (max-width:990px) {
-    header{
- height: 100%;
-    }
-    .custom-carousel{
-        height: 100vh;
-       
-    }
-    .carousel-item{
-     height: 100vh;
-    }
-    .custom-carousel img{
-        height: 100%;
-        width: 100%;
-    }
-
-    .custom-carousel .text{
-        width: 100%;
-       
-        height: 500vh;
-    
-    }
-    .container{
-        width: 100%;
-        height: 100%;
-        display: flex;
-      justify-content: space-around;
-      margin-top: 150px;
-      padding: 50px;
-     
-    }
-    .container h5{
-        font-size: 25px;
-    }
-    .container h1{
-        font-size: 50px;
-        width: 100%;
-        padding: 20px;
-    }
-    .container p{
-        font-size: 30px;
-        padding: 15px;
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-    .btn{
-       text-align: center;
-       width: 40%;
-       height: 50px;
-       font-size: 25px;
-    }
-    .navbar{
-        height: 120px;
-    }
-    .navbar-toggler-icon
-    {
-        font-size: 30px;
-       
-    }
-    .navbar-brand{
-     
-    }
-    .navbar-brand h3{
-        font-size: 60px;
-    }
-    
-}
-@media  (max-width:750px) {
+}@media  (max-width:750px) {
     header{
  height: 100%;
     }
     .custom-carousel{
        height:100%;
-       
+       width: 100% !important;
     }
     .carousel-item{
      height: 300vh;
@@ -210,6 +142,73 @@ p{
     }
     
 }
+@media  (max-width:990px) {
+    header{
+ height: 100%;
+    }
+    .custom-carousel{
+        height: 100vh;
+       width: 100%;
+    }
+    .carousel-item{
+     height: 100vh;
+    }
+    .custom-carousel img{
+        height: 100%;
+        width: 100%;
+    }
+
+    .custom-carousel .text{
+        width: 100%;
+       
+        height: 500vh;
+    
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+      justify-content: space-around;
+      margin-top: 150px;
+      padding: 50px;
+     
+    }
+    .container h5{
+        font-size: 25px;
+    }
+    .container h1{
+        font-size: 50px;
+        width: 100%;
+        padding: 20px;
+    }
+    .container p{
+        font-size: 30px;
+        padding: 15px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .btn{
+       text-align: center;
+       width: 40%;
+       height: 50px;
+       font-size: 25px;
+    }
+    .navbar{
+        height: 120px;
+    }
+    .navbar-toggler-icon
+    {
+        font-size: 30px;
+       
+    }
+    .navbar-brand{
+     
+    }
+    .navbar-brand h3{
+        font-size: 60px;
+    }}
+    
+
 .center{
     text-align: center;
    
@@ -228,7 +227,7 @@ p{
  height: 50% !important;
  width: 22%;
  color: var(--primary);
-}
+ }
 .sec1:hover, .sec1:hover * {
     background-color: var(--primary);
     color: var(--light) !important;
@@ -261,33 +260,6 @@ width: 100%;
    
     padding: 5px;
 }
-@media (max-width:990px){
-    .row{
-       display: flex;
-      
-       justify-content: center;
-       
-      flex-wrap: wrap;
-    }
-    .sec1{
-        text-align: center;
-        width: 40%;
-        margin: 15px;
-        justify-content: center;
-        height: 70% !important;
-   
-    }
-    .sec1 i{
-        font-size: 40px;
-    }
-    .sec1 b{
-        font-size: 35px;
-    }
-    .sec1 p{
-        font-size: 30px;
-    }
-}
-
 @media (max-width:750px){
     .row{
        display: flex;
@@ -314,6 +286,34 @@ width: 100%;
         font-size: 50px;
     }
 }
+@media (max-width:990px){
+    .row{
+       display: flex;
+      width: 100% !important;
+       justify-content: center;
+       
+      flex-wrap: wrap;
+    }
+    .sec1{
+        text-align: center;
+        width: 80%;
+        margin: 15px;
+        justify-content: center;
+        height: 70% !important;
+   
+    }
+    .sec1 i{
+        font-size: 40px;
+    }
+    .sec1 b{
+        font-size: 35px;
+    }
+    .sec1 p{
+        font-size: 30px;
+    }
+}
+
+
 
 .about2{
     display: block;
@@ -331,7 +331,7 @@ width: 100%;
     
 }
 .row .img-about img{
-    height: 100%;
+   width: 70%;
 }
 .about2 .row .text{
  width: 40%;
@@ -392,7 +392,7 @@ padding-top: 10px;
     .about2{
         display: block;
         width: 100%;
-        height: 200vh;
+        height: fit-content;
         
        
     }
@@ -400,9 +400,13 @@ padding-top: 10px;
         display: block;
     }
     .about2 .row .img-about{
-        width: 90%;
+        width: 50% !important;
         text-align: center;
         padding: 35px;
+    }
+    .about2 .row .img-about img{
+        width: 50% !important;
+        height: 50%;
     }
     .about2 .row .text{
         width: 90%;
@@ -440,21 +444,23 @@ padding-top: 10px;
     .about2{
         display: block;
         width: 100%;
-        height: 200vh;
+        height:fit-content;
         
        
     }
     .about2 .row{
         display: block;
+        width: fit-content;
     }
     .about2 .row .img-about{
-        width: 90%;
+        width: 50%;
         text-align: center;
         padding: 35px;
+        height: fit-content;
     }
     .about2 .row .text{
         width: 90%;
-       
+       height: fit-content;
     }
     .about2 .row .text h6{
         font-size: 30px;
